@@ -1,32 +1,49 @@
-# React + TypeScript + Vite
+# Shinless
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> A private, browser-based running-form analyzer that turns treadmill video into understandable gait metrics and coaching cues.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-00A67E?style=flat-square)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Shinless video analysis interface](docs/demo.png)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Shinless analyzes short treadmill-running videos entirely in the browser. MediaPipe extracts pose landmarks frame by frame, the analysis layer identifies gait cycles and biomechanical metrics, and the report experience pairs findings with exercise recommendations. Videos remain on the user's device.
 
-## Expanding the Oxlint configuration
+## Analysis capabilities
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- Accepts a required side view with optional front and rear clips.
+- Smooths pose landmarks before detecting strides and gait events.
+- Measures cadence, arm swing, foot strike, hip drop, knee valgus, overstriding, stride asymmetry, trunk lean, and vertical oscillation.
+- Scores capture quality so uncertain inputs are visible in the report.
+- Overlays the detected skeleton on video for visual inspection.
+- Maps findings to a curated exercise library.
+- Processes media client-side without uploading video to a server.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Tech stack
+
+React 19 · TypeScript · MediaPipe Tasks Vision · React Router · Vite · Vitest
+
+## Run locally
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Quality checks:
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+## Video walkthrough
+
+> 🎬 **Coming soon** — reserved for a complete capture, processing, overlay, and report demonstration.
+
+Shinless is a coaching aid and experimental software, not a medical device.
