@@ -42,8 +42,4 @@ npm run lint
 npm run build
 ```
 
-## Video walkthrough
-
-> 🎬 **Coming soon** — reserved for a complete capture, processing, overlay, and report demonstration.
-
 Shinless is a coaching aid and experimental software, not a medical device.
