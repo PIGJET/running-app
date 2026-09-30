@@ -1,6 +1,6 @@
 # Shinless
 
-> A private, browser-based running-form analyzer that turns treadmill video into understandable gait metrics and coaching cues.
+> A browser-based running-form analyzer that keeps treadmill video on your device and turns it into gait metrics and coaching cues.
 
 ![React](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
